@@ -1,49 +1,42 @@
 <template>
   <header>
-    <!-- <div class="container">
-      <nav class="navbar">
-        <a href="#" class="navbar-brand"><img src="@/assets/logo.png" alt="fable logo"></a>
-        <div class="right">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown link
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-          </ul>
+    <nav class="navbar navbar-expand-lg navbar-light p-0 h-100">
+      <div class="container h-100">
+
+        <div class="left h-100">
+          <a class="navbar-brand py-4" href="#"><img src="@/assets/logo.png" alt="logo fable" id="logo"></a>
         </div>
-      </nav>
-    </div> -->
 
-  <div class="dropdown">
-    <button
-      class="btn btn-primary dropdown-toggle"
-      type="button" id="dropdownMenuButton1"
-      data-bs-toggle="dropdown"
-      aria-expanded="false">
-      Dropdown button: {{value}}
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" role="menu">
-      <li v-for="option in options" :key="option">
-        <a class="dropdown-item" @click="value = option" href="javascript:void(0)">{{option}}</a>
-      </li>
-    </ul>
-  </div>
+        <div class="right h-100 d-flex align-items-center">
 
+          <div class="collapse navbar-collapse h-100" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 h-100 d-flex align-items-center">
+              
+              <li v-for="(item, index) in navData" :key="index" class="nav-item dropdown h-100">
+                
+                <a class="nav-link d-flex flex-column justify-content-center align-items-center h-100 px-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" :aria-expanded="false" @mouseover="item.isActive = true" @mouseleave="item.isActive = false">
+                  <img class="mb-3" :src="(item.isActive) ? item.iconSrcOver : item.iconSrc" alt="item.name">
+                  <div :class="{'text-white' : item.isActive}">{{item.name}}</div>
+                </a>
+
+                <div class="dropdown-menu m-0" aria-labelledby="navbarDropdown" v-show="item.subItems">
+                  <div class="dropdown-box d-flex p-3">
+                    <ul v-for="(subItems,index) in item.subItems" :key="index" class="d-flex flex-column p-0">
+                      <div v-if="subItems.title" class="subItems-title pb-3 ps-2">{{subItems.title}}</div>
+                      <li v-for="(items, index) in subItems.items" :key="index"><a class="dropdown-item p-2" href="#">{{items}}</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+              </li>
+              
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </nav>
   </header>
 </template>
 
@@ -52,8 +45,119 @@ export default {
   name: 'Header',
   data() {
     return {
-      options: ['Pippo', 'Pluto', 'Paperino'],
-      value: 'Minni'
+      navData: [
+        {
+          name: 'Home',
+          iconSrcOver: require('../assets/navicons/home-2.png'),
+          iconSrc: require('../assets/navicons/home.png'),
+          isActive: false,
+          subItems:[
+            {
+              title:'',
+              items: ['Home Style I','Home Style II', 'Home Style III', 'Home Style IV', 'Home – Scrolling One Page']
+            }
+          ]
+        },
+        {
+          name: 'Pages',
+          iconSrcOver: require('../assets/navicons/document-2.png'),
+          iconSrc: require('../assets/navicons/document.png'),
+          isActive: false,
+          subItems:[
+            {
+              title:'Pages I',
+              items: ['About Us I', 'About Us II', 'Our Services I', 'Our Services II', 'Page Right Sidebar', 'Page Left Sidebar']
+            },
+            {
+              title:'Pages II',
+              items: ['Our Classes', 'Single Class', 'Our Staff I', 'Our Staff II', 'Single Teacher', 'Mael Menu']
+            },
+            {
+              title:'Pages III',
+              items: ['II Columns Gallery', 'III Columns Gallery', 'Tabbed Gallery', 'Gallery Right Sidebar', 'Gallery Left Sidebar']
+            },
+            {
+              title:'Pages IV',
+              items: ['Contact Us I', 'Contact Us II', 'Pricing Plans I', 'Pricing Plans II', 'Page Not Found', 'Sitemap', 'Maintenance Mode']
+            }
+          ]
+        },
+        {
+          name: 'Blog',
+          iconSrcOver: require('../assets/navicons/printer-2.png'),
+          iconSrc: require('../assets/navicons/printer.png'),
+          isActive: false,
+          subItems:[
+            {
+              title:'Layout',
+              items: ['Blog Full Width', 'Blog Right Sidebar', 'Blog Left Sidebar', 'Post Full Width']
+            },
+            {
+              title:'Post Types',
+              items: ['Post Image', 'Post Audio', 'Post Video I', 'Post Video II']
+            },
+            {
+              title:'Other Pages',
+              items: ['Tag Page', 'Archive Page', 'Category Page', 'Search Result Page']
+            }
+          ]
+        },
+        {
+          name: 'Shop',
+          iconSrcOver: require('../assets/navicons/cart-2.png'),
+          iconSrc: require('../assets/navicons/cart.png'),
+          isActive: false,
+          subItems:[
+            {
+              title:'',
+              items: ['Cart', 'Products', 'My account', 'List Of WooCommerce Widgets']
+            }
+          ]
+        },
+        {
+          name: 'Shortcodes',
+          iconSrcOver: require('../assets/navicons/lab-2.png'),
+          iconSrc: require('../assets/navicons/lab.png'),
+          isActive: false,
+          subItems:[
+            {
+              title:'Shortcodes I',
+              items: ['Example', 'Example', 'Example', 'Example', 'Example', 'Example',]
+            },
+            {
+              title:'Shortcodes II',
+              items: ['Example', 'Example', 'Example', 'Example', 'Example', 'Example',]
+            },
+            {
+              title:'Shortcodes III',
+              items: ['Example', 'Example', 'Example', 'Example', 'Example', 'Example',]
+            },
+            {
+              title:'Shortcodes IV',
+              items: ['Example', 'Example', 'Example', 'Example', 'Example', 'Example',]
+            },
+          ]
+        },
+        {
+          name: 'Support',
+          iconSrcOver: require('../assets/navicons/envelope-2.png'),
+          iconSrc: require('../assets/navicons/envelope.png'),
+          isActive: false,
+          subItems:''
+        },
+        {
+          name: 'Contact',
+          iconSrcOver: require('../assets/navicons/chat-2.png'),
+          iconSrc: require('../assets/navicons/chat.png'),
+          isActive: false,
+          subItems:[
+            {
+              title:'',
+              items: ['Contact Us I', 'Contact Us II']
+            }
+          ]
+        },
+      ]
     }
   },
 }
@@ -62,16 +166,51 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-nav{
+header{
+  height: 180px;
+}
+
+#logo{
   height: 150px;
 }
 
-nav a{
-  height: 100%;
+// DROPDOWN MENU
+
+.dropdown-box li{
+  list-style: none;
+  padding: 0 0 15px;
 }
 
-nav a img{
-  height: 100%;
+.dropdown-box li:last-child{
+  padding: 0;
+}
+
+.dropdown-box a{
+  padding: 0;
+}
+
+.dropdown-box a:hover{
+  background-color: red;
+  color: white;
+}
+
+.nav-link img{
+  width: 2rem;
+}
+
+.nav-link:hover{
+  background-color: red;
+}
+
+.nav-link:hover img{
+  color: white;
+}
+
+.subItems-title{
+  color: #554e9e;
+}
+.dropdown-item{
+  color: grey;
 }
 
 </style>
