@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="vw-100">
     <nav class="navbar navbar-expand-lg navbar-light p-0 h-100">
       <div class="container h-100">
 
@@ -167,7 +167,12 @@ export default {
 <style scoped lang="scss">
 
 header{
-  height: 180px;
+  height: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: white;
 }
 
 #logo{

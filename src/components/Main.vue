@@ -1,12 +1,23 @@
 <template>
-  <header>
-
-  </header>
+  <main>
+    <Jumbotron/>
+    <DividingBar/>
+    <WelcomeSection/>
+  </main>
 </template>
 
 <script>
+import Jumbotron from './Jumbotron.vue'
+import DividingBar from './DividingBar.vue'
+import WelcomeSection from './WelcomeSection.vue'
+
 export default {
   name: 'Main',
+  components: {
+    Jumbotron,
+    DividingBar,
+    WelcomeSection,
+  }
 }
 </script>
 

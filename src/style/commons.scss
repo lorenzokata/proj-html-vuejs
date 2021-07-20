@@ -1,8 +1,127 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn{
+    padding: 10px;
+    border-radius: 0;
+    font-size: 0.7rem;
+}
+
+.custom-card__title{
+    color: var(--butterfly-bush);
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.custom-card__subtitle{
+    color: grey;
+    font-size: 0.7rem;
+}
+
+// section
+.section-title{
+    color: var(--butterfly-bush);
+    font-size: 2.5rem;
+    font-weight: 300;
+    padding-top: 50px;
+}
+
+.section-subtitle{
+    color: grey;
+    font-size: 1.0rem;
+    font-weight: 400;
+}
+
+.section__upper-section{
+    padding: 50px 0;
+}
+
+.section__upper-section__box, .section__lower-section__box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// card
+.box-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-card__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    margin-bottom: 22px;
+}
+
+.box-card__img_orange{
+    background-color: var(--blaze-orange);
+}
+
+.box-card__img_violet{
+    background-color: var(--butterfly-bush);
+}
+
+.box-card__title{
+    font-size: 1.2rem;
+    color: var(--butterfly-bush);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.box-card__p{
+    color: grey;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+// lower-section
+
+.section__lower-section{
+    background-color: var(--bon-jour);
+}
+
+
+
+
+
+:root{
+    // color cube
+    --sugar-cane: #FEFFFE;
+    --butterfly-bush:#554E9E ;
+    --mine-shalf: #262626;
+    --blaze-orange: #FE6601;
+    --cameo: #D7AC95;
+    --crimson: #D71938;
+    --sushi: #84B443;
+    --limeade: #36AD02;
+    --school-bus-yellow: #FCD902;
+    --curious-blue: #1BAFE4;
+    // median cut
+    --bon-jour: #E8E6E7;
+    --east-bay: #444275;
+    --mojo: #C34937;
+    --twine: #C29458;
+    --vida-loca: #47BE27;
+    // material design
+    --victoria: #4C4A9B;
+    --eunry: #CD9F90;
+    --lima: #47BD23;
+    --tuatara: #242423;
+    --cashmere: #E2BEA5;
 }

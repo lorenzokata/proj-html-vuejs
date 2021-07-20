@@ -1,7 +1,7 @@
 <template>
-  <header>
+  <footer>
 
-  </header>
+  </footer>
 </template>
 
 <script>
