@@ -66,6 +66,7 @@
         </div>
       </div>
     </div>
+
     <div class="section__lower-section">
       <div class="container">
 
@@ -74,7 +75,7 @@
           <div class="section__lower-section__box__left pe-3 w-50">
             <ul class="mb-4">
               <li v-for="(content, index) in contentActive" :key="index">
-                <button class="btn" :class="{'btn-danger': content.active, 'btn-inactive': !content.active}">{{content.name}}</button>
+                <button class="btn" :class="{'btn-danger': content.active, 'btn-inactive': !content.active}" @click="changeContent(index)">{{content.name}}</button>
                 <span></span>
               </li>
             </ul>
@@ -82,7 +83,7 @@
             <div v-for="(content, index) in contentActive" :key="index" :class="{'d-none': !content.active}" class="section__lower-section__box__left__content d-flex flex-column align-items-start">
               <h4 class="custom-card__title" v-if="content.p">{{content.p}}</h4>
               <div v-for="(customCard, index) in content.cards" :key="index" class="custom-card d-flex align-items-center mb-4">
-                <div class="custom-card__img me-3">
+                <div class="custom-card__img me-3" :class="{'custom-card__img-transparent': content.iconTransparent}">
                   <img :src="customCard.iconSrc">
                 </div>
                 <div class="custom-card__text d-flex flex-column align-items-start justify-content-between">
@@ -138,7 +139,8 @@ export default {
     return {
       contentActive: [
         {
-          active: true,
+          active: false,
+          iconTransparent: false,
           name: 'Overview',
           p: 'Our philosophy is learning through play as we offer a stimulating environment for children.',
           cards:[
@@ -155,7 +157,8 @@ export default {
           ]
         },
         {
-          active: false,
+          active: true,
+          iconTransparent: true,
           name: 'Our Mission',
           p: '',
           cards:[
@@ -179,6 +182,17 @@ export default {
       ]
     }
   },
+  methods:{
+    changeContent(index){
+      if (!this.contentActive[index].active) {
+        this.contentActive[index].active = !this.contentActive[index].active;
+        let itemsWithoutCurrent = this.contentActive.filter(function(x,i) { return i != index });
+        itemsWithoutCurrent.forEach(element => {
+          element.active = false;
+        });
+      }
+    }
+  }
 }
 </script>
 
@@ -209,5 +223,9 @@ export default {
   display: flex;
 
 }
-
+.custom-card__img-transparent{
+  background-color: white;
+  border: 2px solid;
+  border-color: var(--blaze-orange);
+}
 </style>
