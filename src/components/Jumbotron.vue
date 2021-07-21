@@ -4,7 +4,7 @@
       <div id="carouselExampleInterval" class="carousel slide h-100 position-relative" data-bs-ride="carousel">
         <div class="carousel-inner h-100">
           <!-- prima scheda carosello -->
-          <div class="carousel-item active h-100" data-bs-interval="10000000">
+          <div class="carousel-item active h-100" data-bs-interval="2000">
             <div class="container h-100">
               <div class="box-carousel p-4 d-flex h-100">
                 <img src="@/assets/jumbotron/slider_slide1_img1.png" class="d-block h-100 position-relative" alt="...">
@@ -19,7 +19,7 @@
             </div>
           </div>
           <!-- seconda scheda carosello -->
-          <div class="carousel-item h-100" data-bs-interval="10000000">
+          <div class="carousel-item h-100" data-bs-interval="2000">
             <div class="container h-100">
               <div class="box-carousel p-4 d-flex justify-content-between h-100">
                 <div class="box-carousel__text__2 d-flex flex-column justify-content-center align-items-start">
@@ -35,7 +35,7 @@
             </div>
           </div>
           <!-- terza scheda carosello -->
-          <div class="carousel-item h-100" data-bs-interval="10000000">
+          <div class="carousel-item h-100" data-bs-interval="2000">
             <div class="container h-100">
               <div class="box-carousel p-4 d-flex justify-content-between h-100">
                 <div class="box-carousel__text__3 d-flex flex-column justify-content-center align-items-start">

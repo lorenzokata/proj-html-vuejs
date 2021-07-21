@@ -3,6 +3,7 @@
     <Jumbotron/>
     <DividingBar/>
     <WelcomeSection/>
+    <NumberSection/>
   </main>
 </template>
 
@@ -10,6 +11,7 @@
 import Jumbotron from './Jumbotron.vue'
 import DividingBar from './DividingBar.vue'
 import WelcomeSection from './WelcomeSection.vue'
+import NumberSection from './NumberSection.vue'
 
 export default {
   name: 'Main',
@@ -17,6 +19,7 @@ export default {
     Jumbotron,
     DividingBar,
     WelcomeSection,
+    NumberSection
   }
 }
 </script>
