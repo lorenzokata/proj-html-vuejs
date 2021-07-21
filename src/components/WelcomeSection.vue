@@ -3,7 +3,7 @@
     <div class="container text-center">
 
       <h2 class="section-title">Welcome to Fable</h2>
-      <p class="section-subtitle">
+      <p class="standard-p">
         Fable daycare, preschool, and kindergarten
       </p>
       <img src="@/assets/section-welcome/header_divider.png" alt="section header divider">
@@ -19,10 +19,10 @@
             <div class="box-card__img box-card__img_orange">
               <img src="@/assets/section-welcome/schoolbag_alt.png" alt="schoolbag_alt">
             </div>
-            <div class="box-card__title">
+            <div class="standard-card-title">
               Morbi Etos
             </div>
-            <p class="box-card__p">
+            <p class="standard-p text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio tempora illo architecto ipsum, ex similique?
             </p>
           </div>
@@ -31,10 +31,10 @@
             <div class="box-card__img box-card__img_violet">
               <img src="@/assets/section-welcome/stroller_alt.png" alt="schoolbag_alt">
             </div>
-            <div class="box-card__title">
+            <div class="standard-card-title">
               Morbi Etos
             </div>
-            <p class="box-card__p">
+            <p class="standard-p text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio tempora illo architecto ipsum, ex similique?
             </p>
           </div>
@@ -43,10 +43,10 @@
             <div class="box-card__img box-card__img_orange">
               <img src="@/assets/section-welcome/globe_alt.png" alt="schoolbag_alt">
             </div>
-            <div class="box-card__title">
+            <div class="standard-card-title">
               Morbi Etos
             </div>
-            <p class="box-card__p">
+            <p class="standard-p text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio tempora illo architecto ipsum, ex similique?
             </p>
           </div>
@@ -55,10 +55,10 @@
             <div class="box-card__img box-card__img_violet">
               <img src="@/assets/section-welcome/bell_alt.png" alt="schoolbag_alt">
             </div>
-            <div class="box-card__title">
+            <div class="standard-card-title">
               Morbi Etos
             </div>
-            <p class="box-card__p">
+            <p class="standard-p text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio tempora illo architecto ipsum, ex similique?
             </p>
           </div>
@@ -87,8 +87,8 @@
                   <img :src="customCard.iconSrc">
                 </div>
                 <div class="custom-card__text d-flex flex-column align-items-start justify-content-between">
-                  <h5 class="custom-card__text__title" >{{customCard.title}}</h5>
-                  <p class="custom-card__text__p m-0">{{customCard.p}}</p>
+                  <h5 class="standard-card-title" >{{customCard.title}}</h5>
+                  <p class="standard-p m-0">{{customCard.p}}</p>
                 </div>
               </div>
             </div>
@@ -198,6 +198,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.section__lower-section__box__left{
+  height: 472px;
+}
 .section__lower-section__box__left ul{
   margin: 0px;
   padding: 0px;

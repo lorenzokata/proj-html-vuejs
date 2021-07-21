@@ -7,10 +7,10 @@
             <div class="box-card__img box-card__img_transparent text-white">
               <span>{{card.number}}</span>
             </div>
-            <div class="box-card__title text-white">
+            <div class="standard-card-title text-white">
               {{card.title}}
             </div>
-            <p class="box-card__p text-white">
+            <p class="standard-p text-white">
               {{card.p}}
             </p>
           </div>

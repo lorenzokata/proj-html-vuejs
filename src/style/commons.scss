@@ -5,7 +5,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 22px;
     font-family: 'Roboto', sans-serif;
 }
 // button
@@ -21,6 +20,7 @@
     font-weight: 400;
     margin-bottom: 30px;
 }
+
 .custom-card__img{
     background-color: var(--blaze-orange);
     border-radius: 50%;
@@ -30,31 +30,32 @@
     height: 40px;
     width: 40px;
 }
-.custom-card__text__title{
-    color: var(--butterfly-bush);
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-.custom-card__text__p{
-    color: grey;
-    font-size: 0.8rem;
-    font-weight: 400;
-}
 
-// section
+
+// TESTO
 .section-title{
     color: var(--butterfly-bush);
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-weight: 300;
     padding-top: 50px;
 }
-
-.section-subtitle{
-    color: grey;
-    font-size: 1.0rem;
+.paragraph-title{
+    color: var(--butterfly-bush);
+    font-size: 1.7rem;
+}
+.standard-card-title{
+    color: var(--butterfly-bush);
+    font-size: 1.4rem;
     font-weight: 400;
 }
-
+.standard-p{
+    color: grey;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.section-divider{
+    margin-bottom: 60px;
+}
 .section__upper-section{
     padding: 50px 0;
 }
@@ -93,19 +94,6 @@
 
 .box-card__img_transparent{
     background-color: transparent;
-}
-.box-card__title{
-    font-size: 1.2rem;
-    color: var(--butterfly-bush);
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-.box-card__p{
-    color: grey;
-    font-size: 0.9rem;
-    font-weight: 400;
-    text-align: center;
 }
 
 // lower-section
