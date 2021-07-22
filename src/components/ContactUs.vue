@@ -1,5 +1,5 @@
 <template>
-  <section class="section section-contact">
+  <section class="section section-contact mb-5">
     <div class="container pb-4">
       <!-- titolo -->
       <div class="text-center">
