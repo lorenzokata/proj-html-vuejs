@@ -83,7 +83,7 @@
             <div v-for="(content, index) in contentActive" :key="index" :class="{'d-none': !content.active}" class="section__lower-section__box__left__content d-flex flex-column align-items-start">
               <h4 class="custom-card__title" v-if="content.p">{{content.p}}</h4>
               <div v-for="(customCard, index) in content.cards" :key="index" class="custom-card d-flex align-items-center mb-4">
-                <div class="custom-card__img me-3" :class="{'custom-card__img-transparent': content.iconTransparent}">
+                <div class="custom-card__img custom-card__img-orange me-3" :class="{'custom-card__img-transparent': content.iconTransparent}">
                   <img :src="customCard.iconSrc">
                 </div>
                 <div class="custom-card__text d-flex flex-column align-items-start justify-content-between">

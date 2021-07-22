@@ -5,6 +5,9 @@
     <WelcomeSection/>
     <NumberSection/>
     <ClassesSection/>
+    <ImgBanner/>
+    <DividingBar2/>
+    <MeetSection/>
   </main>
 </template>
 
@@ -14,6 +17,9 @@ import DividingBar from './DividingBar.vue'
 import WelcomeSection from './WelcomeSection.vue'
 import NumberSection from './NumberSection.vue'
 import ClassesSection from './ClassesSection.vue'
+import ImgBanner from './ImgBanner.vue'
+import DividingBar2 from './DividingBar2.vue'
+import MeetSection from './MeetSection.vue'
 
 export default {
   name: 'Main',
@@ -22,7 +28,10 @@ export default {
     DividingBar,
     WelcomeSection,
     NumberSection,
-    ClassesSection
+    ClassesSection,
+    ImgBanner,
+    DividingBar2,
+    MeetSection
   }
 }
 </script>

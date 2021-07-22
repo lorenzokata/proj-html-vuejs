@@ -25,7 +25,7 @@
       <!-- card viola -->
       <div class="row row-cols-2 g-5 mb-5">
         <div v-for="(item, index) in classesCards" :key="index"  class="col">
-          <div class="card-box d-flex">
+          <div class="card-box card-box_violet d-flex">
             <div class="card-box__left d-flex flex-column justify-content-between p-4 h-100 w-50">
               <div class="card-box__left__upper">
                 <div class="standard-card-title text-white">
@@ -56,33 +56,55 @@
           </div>
         </div>
       </div>
-
+    </div>
       <!-- lower section -->
-      <div class="lower-section">
-        <div class="row g-5 my-5">
-          <div class="col">
-            <div class="d-flex flex-column justify-content-between">
-              <div class="paragraph-title">
-                We have been educating children for over fifteen years. Our goal is to create a place that engages each child.
+      <div class=" section__lower-section py-5">
+        <div class="container">
+          <div class="row g-5">
+
+            <div class="col">
+              <div class="d-flex flex-column justify-content-between h-100">
+                <div class="paragraph-title">
+                  We have been educating children for over fifteen years. Our goal is to create a place that engages each child.
+                </div>
+                <div class="standard-p">
+                  Praesent arcu gravida vehicula est node maecenas loareet morbi a dosis luctus. Urna eget lacinia eleifend praesent luctus a arcu quis facilisis venenatis aenean interdum.
+                </div>
+                <ul>
+                  <li>Comprehensive reporting on individual achievement</li>
+                  <li>Educational field trips and school presentations</li>
+                  <li>Individual attention in a small-class setting</li>
+                  <li>Learning program with after-school care</li>
+                  <li>Opportunities to carry out scientific investigations</li>
+                  <li>Positive learning environment for your child</li>
+                </ul>
               </div>
-              <div class="standard-p">
-                Praesent arcu gravida vehicula est node maecenas loareet morbi a dosis luctus. Urna eget lacinia eleifend praesent luctus a arcu quis facilisis venenatis aenean interdum.
-              </div>
-              <ul>
-                <li>Comprehensive reporting on individual achievement</li>
-                <li>Educational field trips and school presentations</li>
-                <li>Individual attention in a small-class setting</li>
-                <li>Learning program with after-school care</li>
-                <li>Opportunities to carry out scientific investigations</li>
-                <li>Positive learning environment for your child</li>
-              </ul>
             </div>
+
+            <div class="col">
+              <div class="row row-cols-2 g-5 mb-5">
+                <div v-for="(item, index) in featureClasses" :key="index"  class="col">
+                  <div class="card-box d-flex flex-column align-items-center justify-content-between">
+                    <div class="custom-card__img bg-white">
+                      <img :src="item.imgSrc">
+                    </div>
+                    <div class="standard-card-title text-center">{{item.title}}</div>
+                    <div class="standard-p m-0 text-center">{{item.p}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="col"></div>
         </div>
       </div>
+        
 
-    </div>
+
+
+
+
+
   </section>
 </template>
 
@@ -116,6 +138,28 @@ export default {
           classSize:'20',
           imgSrc:require('../assets/classes-section/class_04-690x506.jpg')
         },
+      ],
+      featureClasses:[
+        {
+          imgSrc: require('../assets/classes-section/toy.png'),
+          title: 'Learning & Fun',
+          p: 'Praesent modea est gravida node vehicula luctus.'
+        },
+        {
+          imgSrc: require('../assets/classes-section/meal.png'),
+          title: 'Healthy Meals',
+          p: 'Terminal interdum a eleifend maecenas est morbi.'
+        },
+        {
+          imgSrc: require('../assets/classes-section/school.png'),
+          title: 'Friendly Place',
+          p: 'Terminal interdum a eleifend maecenas est morbi.'
+        },
+        {
+          imgSrc: require('../assets/classes-section/shield.png'),
+          title: 'Children Safety',
+          p: 'Praesent modea est gravida node vehicula luctus.'
+        },
       ]
     }
   },
@@ -126,6 +170,8 @@ export default {
 <style scoped lang="scss">
 .card-box{
   height: 210px;
+}
+.card-box_violet{
   background-color: var(--butterfly-bush);
 }
 .card-box__right{
@@ -140,14 +186,15 @@ export default {
 .card-box__left__lower__left{
   border-right: 2px solid grey;
 }
-.lower-section ul{
+.section__lower-section ul{
   margin: 0px;
   padding: 0px;
   list-style: none;
 }
 
-.lower-section li{
+.section__lower-section li{
   padding-left: 30px;
+  margin-bottom: 10px;
   background-size: 17px 17px;
   background-repeat: no-repeat;
   background-position: left 2px;
