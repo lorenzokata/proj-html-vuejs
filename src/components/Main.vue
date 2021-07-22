@@ -10,6 +10,7 @@
     <MeetSection/>
     <TransparentSection/>
     <WhatsNewSection/>
+    <ContactUs/>
   </main>
 </template>
 
@@ -24,6 +25,7 @@ import DividingBar2 from './DividingBar2.vue'
 import MeetSection from './MeetSection.vue'
 import TransparentSection from './TransparentSection.vue'
 import WhatsNewSection from './WhatsNewSection.vue'
+import ContactUs from './ContactUs.vue'
 
 export default {
   name: 'Main',
@@ -37,7 +39,8 @@ export default {
     DividingBar2,
     MeetSection,
     TransparentSection,
-    WhatsNewSection
+    WhatsNewSection,
+    ContactUs
   }
 }
 </script>
