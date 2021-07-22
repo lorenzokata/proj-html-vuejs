@@ -8,6 +8,7 @@
     <ImgBanner/>
     <DividingBar2/>
     <MeetSection/>
+    <TransparentSection/>
   </main>
 </template>
 
@@ -20,6 +21,7 @@ import ClassesSection from './ClassesSection.vue'
 import ImgBanner from './ImgBanner.vue'
 import DividingBar2 from './DividingBar2.vue'
 import MeetSection from './MeetSection.vue'
+import TransparentSection from './TransparentSection.vue'
 
 export default {
   name: 'Main',
@@ -31,7 +33,8 @@ export default {
     ClassesSection,
     ImgBanner,
     DividingBar2,
-    MeetSection
+    MeetSection,
+    TransparentSection
   }
 }
 </script>
