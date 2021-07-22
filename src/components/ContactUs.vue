@@ -13,7 +13,7 @@
       <!-- info -->
       <div class="py-4">
 
-        <div class="row row-cols-4 g-5">
+        <div class="row row-cols-4 mb-5 g-5">
           <div v-for="(item, index) in infoContact" :key="index"  class="col">
             <div class="card-box d-flex flex-column align-items-center justify-content-between">
 
@@ -33,15 +33,39 @@
           </div>
         </div>
 
+        <div class="row row cols-2 mt-5 g-5">
+          <div class="col">
+            <div class="form-box d-flex flex-column justify-content-between p-2">
+              <div class="form-box__name">
+                <input type="text" name="name" id="name" placeholder="Your Name *" class="w-100 p-2">
+              </div>
+              <div class="form-box__email">
+                <input type="text" name="email" id="email" placeholder="Your E-Mail*" class="w-100 p-2">
+              </div>
+              <div class="form-box__subject">
+                <input type="text" name="subject" id="subject" placeholder="Subject" class="w-100 p-2">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-box">
+              <div class="form-box__message p-2 h-100 position-relative">
+                <textarea type="text" name="message" id="message" class="w-100 h-100 p-2" placeholder="Your Message *"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- button -->
+      <div class="text-center">
+        <button class="custom-button text-uppercase p-3 text-center">
+          <span>Send Message</span>
+        </button>
+      </div>
+
+
     </div>
-        
-
-
-
-
-
-
   </section>
 </template>
 
@@ -118,5 +142,11 @@ export default {
   background-repeat: no-repeat;
   background-position: left 2px;
   background-image: url('../assets/classes-section/style_1.png');
+}
+
+
+
+.form-box{
+  height: 200px;
 }
 </style>

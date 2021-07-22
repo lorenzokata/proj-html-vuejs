@@ -62,7 +62,7 @@
 
       <!-- button -->
       <div class="text-center">
-        <button class="custom-button text-uppercase p-2 text-center">
+        <button class="custom-button text-uppercase p-3 text-center">
           <span class="pe-2">Go to blog</span>
           <i class="fas fa-chevron-right"></i>
         </button>
