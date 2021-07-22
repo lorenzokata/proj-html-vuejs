@@ -1,7 +1,7 @@
 <template>
   <section class="section section-img-banner">
-    <div v-for="(item, index) in imgs" :key="index" class="h-100 w-15 d-inline-block">
-      <img :src="item" class="h-100">
+    <div v-for="(item, index) in imgs" :key="index" class="h-100 w-25 d-inline-block">
+      <img :src="item" class="w-100">
     </div>
   </section>
 </template>
@@ -25,7 +25,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.section-img-banner{
-  height: 352px;
-}
+
 </style>

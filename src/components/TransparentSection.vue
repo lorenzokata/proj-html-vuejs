@@ -68,9 +68,11 @@ export default {
 
 .section-transparent{
   padding: 50px 0;
-  background-image: url('../assets/transparent-section/parallax_02.jpg');
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  background-image: url('../assets/transparent-section/parallax_02.jpg');
 }
 
 .custom-card__img{

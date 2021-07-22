@@ -74,9 +74,11 @@ export default {
 
 .section-number{
   padding: 50px 0;
-  background-image: url('../assets/section-number/background.jpg');
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  background-image: url('../assets/section-number/background.jpg');
 }
 
 .box-card__img_transparent{
