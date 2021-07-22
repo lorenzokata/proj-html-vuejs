@@ -217,6 +217,7 @@ export default {
   display: inline-block;
   text-decoration: none;
 }
+
 .section__lower-section__box__left button .btn-inactive{
   color: grey;
   background-color:transparent;
